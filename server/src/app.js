@@ -1,4 +1,3 @@
-console.log('Hello')
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -9,9 +8,15 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
 
+// app.get('/register', (req, res) => {
+//     res.send({
+//         message: `Registrado ${req.body.email}!`
+//     })
+// })
+
 app.get('/status', (req, res) => {
     res.send({
-        message: 'hello world!'
+        message: `Registrado!`
     })
 })
 
